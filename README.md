@@ -14,24 +14,24 @@ the directory structure to be the following:
 		|--annotations
 			|--1_shot.json
 			|--5_shot.json
-      |--10_shot.json
-      |--test.json
+      			|--10_shot.json
+      			|--test.json
 		|--train
 		|--test
 	|--dataset2
 		|--annotations
 			|--1_shot.json
 			|--5_shot.json
-      |--10_shot.json
-      |--test.json
+      			|--10_shot.json
+      			|--test.json
 		|--train
 		|--test
  |--dataset3
 		|--annotations
 			|--1_shot.json
 			|--5_shot.json
-      |--10_shot.json
-      |--test.json
+      			|--10_shot.json
+      			|--test.json
 		|--train
 		|--test
 ｜--pretrained_models
