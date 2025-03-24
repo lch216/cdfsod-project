@@ -168,11 +168,6 @@ def main(args):
 
     dataset_train = build_dataset(image_set='train', args=args)
     dataset_val = build_dataset(image_set='test', args=args)
-    print('train')
-    print(len(dataset_train))
-    print('val')
-    print(len(dataset_val))
-    print(a)
     if args.distributed:
         sampler_train = DistributedSampler(dataset_train)
         sampler_val = DistributedSampler(dataset_val, shuffle=False)
@@ -211,7 +206,6 @@ def main(args):
     if os.path.exists(os.path.join(args.output_dir, 'checkpoint.pth')):
         args.resume = os.path.join(args.output_dir, 'checkpoint.pth')
     if args.resume:
-        print("222")
         if args.resume.startswith('https'):
             checkpoint = torch.hub.load_state_dict_from_url(
                 args.resume, map_location='cpu', check_hash=True)
@@ -287,9 +281,7 @@ def main(args):
     start_time = time.time()
     best_map_holder = BestMetricHolder(use_ema=args.use_ema)
     print(args.start_epoch)
-    args.epochs = 40
     for epoch in range(args.start_epoch, args.epochs):
-        print('222')
         epoch_start_time = time.time()
         if args.distributed:
             sampler_train.set_epoch(epoch)
