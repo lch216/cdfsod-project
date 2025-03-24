@@ -46,5 +46,15 @@ the directory structure to be the following:
 
 model file: [download link](https://pan.baidu.com/s/1W_oVNEMd6ie09wpXiPXbfw?pwd=6338)
 
+- Our environment 
+  - python: 3.9.16
+  - Torch: 2.0.1+cu118
+  - Torchvision: 0.15.2+cu118
+
+- Train
+
+  ```
+  bash scripts/DINO_train.sh
+  ```
 
 
